@@ -51,7 +51,10 @@ struct ListButton: View {
     var body: some View {
         Button(action: {open.toggle()}) {
             ListTitle(title: title)
-            open ? ListContent() : ListContent()
+            
+            if(open) {
+                ListContent()
+            }
             
         }
     }
