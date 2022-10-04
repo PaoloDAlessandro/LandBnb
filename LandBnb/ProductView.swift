@@ -31,10 +31,14 @@ struct ProductView: View {
                 .frame(width:350, height:300)
                 .cornerRadius(40)
             
-            ListButton(title: "Guests")
+            ListButton(title: "Guests", content: AnyView(GuestsContent()))
+                .padding(.top)
+            ListButton(title: "Date", content: AnyView(GuestsContent()))
+                .padding(.top)
+
         }
         .listRowSeparator(.hidden)
-        .cornerRadius(40)
+        .cornerRadius(20)
         
         Spacer()
     }
@@ -42,21 +46,22 @@ struct ProductView: View {
 
 struct ListButton: View {
     private var title: String
+    private var content: AnyView
+    
     @State var open: Bool = false
     
-    init(title: String) {
+    init(title: String, content: AnyView) {
         self.title = title
+        self.content = content
     }
     
     var body: some View {
         Button(action: {open.toggle()}) {
             ListTitle(title: title)
-            open ? ListContent() : ListContent()
-            
+            if(open) { content }
         }
     }
 }
-
 
 struct ListTitle: View {
     private var title: String
@@ -73,15 +78,18 @@ struct ListTitle: View {
     }
 }
 
-struct ListContent: View {
+struct GuestsContent: View {
     @State private var adultsNumber: Int = 0
-    
+    @State private var childrenNumber: Int = 0
+    @State private var babiesNumber: Int = 0
+    @State private var petsNumber: Int = 0
+
     var body: some View {
         VStack {
-            Stepper("Adults", value: $adultsNumber, in: 0...20)
-            Stepper("Children", value: $adultsNumber, in: 0...20)
-            Stepper("Babies", value: $adultsNumber, in: 0...20)
-            Stepper("Pets", value: $adultsNumber, in: 0...20)
+            Stepper("Adults: \(adultsNumber)", value: $adultsNumber, in: 0...20)
+            Stepper("Children: \(childrenNumber)", value: $childrenNumber, in: 0...20)
+            Stepper("Babies: \(babiesNumber)", value: $babiesNumber, in: 0...20)
+            Stepper("Pets: \(petsNumber)", value: $petsNumber, in: 0...20)
         }
     }
 }
