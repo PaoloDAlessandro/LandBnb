@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		523FD15928EC5F4400C6F0AA /* LandBnbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD15828EC5F4400C6F0AA /* LandBnbApp.swift */; };
+		523FD15B28EC5F4400C6F0AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD15A28EC5F4400C6F0AA /* ContentView.swift */; };
+		523FD15D28EC5F4500C6F0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523FD15C28EC5F4500C6F0AA /* Assets.xcassets */; };
+		523FD16128EC5F4500C6F0AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523FD16028EC5F4500C6F0AA /* Preview Assets.xcassets */; };
+		523FD16B28EC5F4600C6F0AA /* LandBnbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD16A28EC5F4600C6F0AA /* LandBnbTests.swift */; };
+		523FD17528EC5F4600C6F0AA /* LandBnbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD17428EC5F4600C6F0AA /* LandBnbUITests.swift */; };
+		523FD17728EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD17628EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		523FD16728EC5F4600C6F0AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 523FD14D28EC5F4400C6F0AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 523FD15428EC5F4400C6F0AA;
+			remoteInfo = LandBnb;
+		};
+		523FD17128EC5F4600C6F0AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 523FD14D28EC5F4400C6F0AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 523FD15428EC5F4400C6F0AA;
+			remoteInfo = LandBnb;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		523FD15528EC5F4400C6F0AA /* LandBnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandBnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		523FD15828EC5F4400C6F0AA /* LandBnbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbApp.swift; sourceTree = "<group>"; };
+		523FD15A28EC5F4400C6F0AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		523FD15C28EC5F4500C6F0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		523FD15E28EC5F4500C6F0AA /* LandBnb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LandBnb.entitlements; sourceTree = "<group>"; };
+		523FD16028EC5F4500C6F0AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		523FD16628EC5F4600C6F0AA /* LandBnbTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandBnbTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		523FD16A28EC5F4600C6F0AA /* LandBnbTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbTests.swift; sourceTree = "<group>"; };
+		523FD17028EC5F4600C6F0AA /* LandBnbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandBnbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		523FD17428EC5F4600C6F0AA /* LandBnbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUITests.swift; sourceTree = "<group>"; };
+		523FD17628EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		523FD15228EC5F4400C6F0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16328EC5F4600C6F0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16D28EC5F4600C6F0AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		523FD14C28EC5F4400C6F0AA = {
+			isa = PBXGroup;
+			children = (
+				523FD15728EC5F4400C6F0AA /* LandBnb */,
+				523FD16928EC5F4600C6F0AA /* LandBnbTests */,
+				523FD17328EC5F4600C6F0AA /* LandBnbUITests */,
+				523FD15628EC5F4400C6F0AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		523FD15628EC5F4400C6F0AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				523FD15528EC5F4400C6F0AA /* LandBnb.app */,
+				523FD16628EC5F4600C6F0AA /* LandBnbTests.xctest */,
+				523FD17028EC5F4600C6F0AA /* LandBnbUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		523FD15728EC5F4400C6F0AA /* LandBnb */ = {
+			isa = PBXGroup;
+			children = (
+				523FD15828EC5F4400C6F0AA /* LandBnbApp.swift */,
+				523FD15A28EC5F4400C6F0AA /* ContentView.swift */,
+				523FD15C28EC5F4500C6F0AA /* Assets.xcassets */,
+				523FD15E28EC5F4500C6F0AA /* LandBnb.entitlements */,
+				523FD15F28EC5F4500C6F0AA /* Preview Content */,
+			);
+			path = LandBnb;
+			sourceTree = "<group>";
+		};
+		523FD15F28EC5F4500C6F0AA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				523FD16028EC5F4500C6F0AA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		523FD16928EC5F4600C6F0AA /* LandBnbTests */ = {
+			isa = PBXGroup;
+			children = (
+				523FD16A28EC5F4600C6F0AA /* LandBnbTests.swift */,
+			);
+			path = LandBnbTests;
+			sourceTree = "<group>";
+		};
+		523FD17328EC5F4600C6F0AA /* LandBnbUITests */ = {
+			isa = PBXGroup;
+			children = (
+				523FD17428EC5F4600C6F0AA /* LandBnbUITests.swift */,
+				523FD17628EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift */,
+			);
+			path = LandBnbUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		523FD15428EC5F4400C6F0AA /* LandBnb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523FD17A28EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnb" */;
+			buildPhases = (
+				523FD15128EC5F4400C6F0AA /* Sources */,
+				523FD15228EC5F4400C6F0AA /* Frameworks */,
+				523FD15328EC5F4400C6F0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LandBnb;
+			productName = LandBnb;
+			productReference = 523FD15528EC5F4400C6F0AA /* LandBnb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		523FD16528EC5F4600C6F0AA /* LandBnbTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523FD17D28EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnbTests" */;
+			buildPhases = (
+				523FD16228EC5F4600C6F0AA /* Sources */,
+				523FD16328EC5F4600C6F0AA /* Frameworks */,
+				523FD16428EC5F4600C6F0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523FD16828EC5F4600C6F0AA /* PBXTargetDependency */,
+			);
+			name = LandBnbTests;
+			productName = LandBnbTests;
+			productReference = 523FD16628EC5F4600C6F0AA /* LandBnbTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		523FD16F28EC5F4600C6F0AA /* LandBnbUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523FD18028EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnbUITests" */;
+			buildPhases = (
+				523FD16C28EC5F4600C6F0AA /* Sources */,
+				523FD16D28EC5F4600C6F0AA /* Frameworks */,
+				523FD16E28EC5F4600C6F0AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523FD17228EC5F4600C6F0AA /* PBXTargetDependency */,
+			);
+			name = LandBnbUITests;
+			productName = LandBnbUITests;
+			productReference = 523FD17028EC5F4600C6F0AA /* LandBnbUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		523FD14D28EC5F4400C6F0AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					523FD15428EC5F4400C6F0AA = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					523FD16528EC5F4600C6F0AA = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 523FD15428EC5F4400C6F0AA;
+					};
+					523FD16F28EC5F4600C6F0AA = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 523FD15428EC5F4400C6F0AA;
+					};
+				};
+			};
+			buildConfigurationList = 523FD15028EC5F4400C6F0AA /* Build configuration list for PBXProject "LandBnb" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 523FD14C28EC5F4400C6F0AA;
+			productRefGroup = 523FD15628EC5F4400C6F0AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				523FD15428EC5F4400C6F0AA /* LandBnb */,
+				523FD16528EC5F4600C6F0AA /* LandBnbTests */,
+				523FD16F28EC5F4600C6F0AA /* LandBnbUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		523FD15328EC5F4400C6F0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523FD16128EC5F4500C6F0AA /* Preview Assets.xcassets in Resources */,
+				523FD15D28EC5F4500C6F0AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16428EC5F4600C6F0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16E28EC5F4600C6F0AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		523FD15128EC5F4400C6F0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523FD15B28EC5F4400C6F0AA /* ContentView.swift in Sources */,
+				523FD15928EC5F4400C6F0AA /* LandBnbApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16228EC5F4600C6F0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523FD16B28EC5F4600C6F0AA /* LandBnbTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523FD16C28EC5F4600C6F0AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523FD17728EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift in Sources */,
+				523FD17528EC5F4600C6F0AA /* LandBnbUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		523FD16828EC5F4600C6F0AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 523FD15428EC5F4400C6F0AA /* LandBnb */;
+			targetProxy = 523FD16728EC5F4600C6F0AA /* PBXContainerItemProxy */;
+		};
+		523FD17228EC5F4600C6F0AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 523FD15428EC5F4400C6F0AA /* LandBnb */;
+			targetProxy = 523FD17128EC5F4600C6F0AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		523FD17828EC5F4600C6F0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		523FD17928EC5F4600C6F0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		523FD17B28EC5F4600C6F0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LandBnb/LandBnb.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LandBnb/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		523FD17C28EC5F4600C6F0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LandBnb/LandBnb.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LandBnb/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		523FD17E28EC5F4600C6F0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnbTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LandBnb.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LandBnb";
+			};
+			name = Debug;
+		};
+		523FD17F28EC5F4600C6F0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnbTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LandBnb.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LandBnb";
+			};
+			name = Release;
+		};
+		523FD18128EC5F4600C6F0AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnbUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LandBnb;
+			};
+			name = Debug;
+		};
+		523FD18228EC5F4600C6F0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnbUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LandBnb;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		523FD15028EC5F4400C6F0AA /* Build configuration list for PBXProject "LandBnb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523FD17828EC5F4600C6F0AA /* Debug */,
+				523FD17928EC5F4600C6F0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523FD17A28EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523FD17B28EC5F4600C6F0AA /* Debug */,
+				523FD17C28EC5F4600C6F0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523FD17D28EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnbTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523FD17E28EC5F4600C6F0AA /* Debug */,
+				523FD17F28EC5F4600C6F0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523FD18028EC5F4600C6F0AA /* Build configuration list for PBXNativeTarget "LandBnbUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523FD18128EC5F4600C6F0AA /* Debug */,
+				523FD18228EC5F4600C6F0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 523FD14D28EC5F4400C6F0AA /* Project object */;
+}
