@@ -8,25 +8,34 @@
 import SwiftUI
 
 struct LandBnbUI: View {
-    var tabs = ["Esplora", "Preferiti", "Viaggi", "Messaggi", "Profilo"]
+    var tabs = ["magnifyingglass", "heart", "safari", "message", "person"]
     
     @State var selectedTab = "Esplora"
     
     init() {
-    UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().backgroundColor = nil
     }
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
-            TabView(selection: $selectedTab) {}
+            TabView(selection: $selectedTab){
+                ContentView()
+                    .tag("magnifyingglass")
+                
+                ProductView()
+                    .tag("safari")
+                
+                LogInView()
+                    .tag("person")
+            }
                 HStack(spacing: 0) {
                     ForEach(tabs, id: \.self) { image in
                         Button(action: { selectedTab = image}, label: {
-                            Image(systemName: "magnifyingglass")
+                            Image(systemName: image)
                                 .resizable()
                                 .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 22, height: 22)
-                                .foregroundColor(selectedTab == image ? .redIcon : .gray)
+                                .foregroundColor(selectedTab == image ? .redIcon : .darkblue)
                             
                         })
                         .frame(width: 25, height: 30)
@@ -36,8 +45,11 @@ struct LandBnbUI: View {
                 .padding(.horizontal, 30)
                 .padding(.vertical)
                 .background(.white)
+                .cornerRadius(40)
+                .shadow(radius: 2)
                 .padding(.horizontal)
                 .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+            
             }
             .ignoresSafeArea(.all, edges: .all)
     }

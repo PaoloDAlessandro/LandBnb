@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var search = ""
     @State private var searchOnOver = false
+    
     var body: some View {
         ZStack {
             VStack {

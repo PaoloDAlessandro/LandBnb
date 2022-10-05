@@ -11,7 +11,7 @@ import SwiftUI
 struct LandBnbApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandBnbUI()
         }
     }
 }
