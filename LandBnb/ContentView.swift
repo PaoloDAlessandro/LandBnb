@@ -13,6 +13,13 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
+                Rectangle()
+                    .frame(width: .infinity, height: .infinity)
+                    .opacity(0.001)
+                    .layoutPriority(-1)
+                    .onTapGesture {
+                        searchOnOver = false
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.lightgray)
@@ -34,6 +41,7 @@ struct ContentView: View {
                 Text("Dove vuoi andare?")
                     .font(.title)
                     .fontWeight(.bold)
+                    .foregroundColor(.darkblue)
                 HStack {
                     Image(systemName: "magnifyingglass")
                     TextField("", text: $search)
@@ -49,6 +57,10 @@ struct ContentView: View {
                 }
                 Spacer()
                 TextField("", text: $search)
+                
+                
+                Spacer()
+                    .frame(height: 16)
 
             }
             
@@ -57,6 +69,7 @@ struct ContentView: View {
 
         }.background(
             Image("surface")
+                .blur(radius: 2)
                 
         )
     }

@@ -53,6 +53,7 @@ struct LogInView: View {
                     .frame(maxHeight: 130)
                 Text("Accedi")
                     .font(.title)
+                    .foregroundColor(.darkblue)
                     .fontWeight(.bold)
                     .padding(.bottom, 24)
                 VStack {
@@ -68,6 +69,7 @@ struct LogInView: View {
                                     .stroke(emailOnOver ? .blue.opacity(0.4) : .gray.opacity(0.4), lineWidth: 1))
                             .onTapGesture {
                                 emailOnOver.toggle()
+                                passwordOnOver = false
                             }
                     }
                     .padding(.bottom, 10)
@@ -87,6 +89,7 @@ struct LogInView: View {
                                     .stroke(passwordOnOver ? .blue.opacity(0.4) : .gray.opacity(0.4), lineWidth: 1))
                             .onTapGesture {
                                 passwordOnOver.toggle()
+                                emailOnOver = false
                             }
                     }
                     .padding(.top, 18)
@@ -112,60 +115,19 @@ struct LogInView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 40)
                         .stroke(.gray.opacity(0.6), lineWidth: 1))
-                .shadow(color: Color.black.opacity(0.1), radius: 5)
+                .shadow(color: Color.gray.opacity(0.05), radius: 2)
                 
                 Spacer()
-                    .frame()
-                
-                HStack {
-                    VStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Esplora")
-                            .font(.footnote)
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    VStack {
-                        Image(systemName: "heart")
-                        Text("Preferiti")
-                            .font(.footnote)
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    VStack {
-                        Image(systemName: "safari")
-                        Text("Viaggi")
-                            .font(.footnote)
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    VStack {
-                        Image(systemName: "message")
-                        Text("Messaggi")
-                            .font(.footnote)
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    VStack {
-                        Image(systemName: "person")
-                        Text("Profilo")
-                            .font(.footnote)
-                    }
-                    .padding(.horizontal, 6)
-                    
-                }
-                .frame(maxWidth: .infinity)
-                .padding([.top, .bottom], 18)
-                .background(Color.white)
-                .cornerRadius(40)
             }
             .padding([.bottom, .top], 0)
             .padding(.horizontal, 20)
+            .ignoresSafeArea(edges: .bottom)
+            .shadow(radius: 2)
+
 
         }.background(
             Image("surface")
                 .blur(radius: 2)
-                
         )
     }
 }
