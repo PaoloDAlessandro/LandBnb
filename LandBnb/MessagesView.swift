@@ -7,31 +7,59 @@
 
 import SwiftUI
 
+private struct User: Identifiable {
+    let username: String
+    let userImage: String
+    let messages: [String]
+    var id: String { username }
+}
+
+private let users: [User] = [
+    User(username: "Alessandro", userImage: "aledele", messages: ["Ciao! Piacere Martina"]),
+    User(username: "Paolo", userImage: "paolo", messages: ["Ti aspettiamo il 15 agosto"])
+]
+
 struct MessagesView: View {
+    
     var users_message = ["Erick", "Martin", "Francesca", "Roberto"]
     var messages = ["L'appartamento viene...", "Ti aspettiamo il 15 agosto", "Ciao! Piacere Manuel", "nana"]
+    
+    init() {
+       UITableView.appearance().separatorStyle = .none
+       UITableViewCell.appearance().backgroundColor = .white
+       UITableView.appearance().backgroundColor = .white
+    }
+    
     var body: some View {
         
-        List(users_message, id: \.self) { datum in
-            UserRow(content: datum, message: messages[users_message.firstIndex(of: datum) ?? 0])
+        VStack() {
+            Text("Messages")
+            List {
+                ForEach(users) { user in
+                    UserRow(username: user.username, userImage: user.userImage, message: user.messages[0])
+                        .listRowBackground(Color.lightgray)
+                }
+            }
         }
     }
 }
 
 struct UserRow: View {
-    var content: String
+    var username: String
+    var userImage: String
     var message: String
     var body: some View {
         HStack {
-            Image("user1")
+            Image(userImage)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
+                .scaledToFit()
                 .clipShape(Circle())
-                .frame(width: 70, height: 70)
             VStack(alignment: .leading) {
-                Text(content)
+                Text(username)
                     .font(.title3)
                     .fontWeight(.semibold)
+                    .foregroundColor(.darkblue)
                 Text(message)
                     .font(.body)
                     .foregroundColor(.gray)
@@ -42,6 +70,7 @@ struct UserRow: View {
                 .foregroundColor(.green)
             
         }
+        .padding([.top, .bottom], 18)
     }
 }
 

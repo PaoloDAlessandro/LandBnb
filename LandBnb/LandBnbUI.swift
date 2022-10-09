@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct LandBnbUI: View {
     var tabs = ["magnifyingglass", "heart", "safari", "message", "person"]
     
@@ -31,7 +32,6 @@ struct LandBnbUI: View {
                 LogInView()
                     .tag("person")
             }
-            .background(.white)
                 HStack(spacing: 0) {
                     ForEach(tabs, id: \.self) { image in
                         Button(action: { selectedTab = image}, label: {

@@ -8,41 +8,70 @@
 import SwiftUI
 import MapKit
 
+
 struct ProductView: View {
+    
+    init() {
+       UITableView.appearance().separatorStyle = .none
+       UITableViewCell.appearance().backgroundColor = .white
+       UITableView.appearance().backgroundColor = .white
+    }
+    
     var body: some View {
         VStack {
-            ScrollView(.horizontal) {
-                //ForEach
-                ProductImage(imageName: "product-example")
-            }
+            VStack {
+                ScrollView(.horizontal) {
+                    //ForEach
+                    ProductImage(imageName: "product-example")
+                }
                 
-            List {
-                ListTitle(title: "Accomodation Name")
+                Divider()
+                    List {
+                        ListTitle(title: "Accomodation Name")
+                            .listRowBackground(Color.lightgray)
+                            .foregroundColor(.darkblue)
+                        
+                        Text("Milan, Lombardy, Italy")
+                            .foregroundColor(.darkblue.opacity(0.9))
+                            .listRowSeparator(.hidden)
+                            .foregroundColor(.gray)
+                            .padding(.top, -20)
+                            .listRowBackground(Color.lightgray)
 
-                Text("Milan, Lombardy, Italy")
-                    .listRowSeparator(.hidden)
-                    .foregroundColor(.gray)
-                    .padding(.top, -20)
                         
-                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.")
-                        .listRowSeparator(.hidden)
-                        .frame(maxHeight: 100)
-                        .padding(.top, -20)
-                        
-                ListTitle(title: "Where")
-                        
-                ListMap(placeLatitude: 45.4654219, placeLongitude: 9.1859243)
-                        
-                ListButton(title: "Guests",
-                           contentOpened: AnyView(GuestsContent()),
-                           contentClosed: AnyView(GuestsContent().showGuests() ))
-                        
-                ListButton(title: "Dates",
-                           contentOpened: AnyView(DatesContent() ),
-                           contentClosed: AnyView(DatesContent().showDates() ))
+                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.")
+                            .foregroundColor(.gray)
+                            .listRowSeparator(.hidden)
+                            .frame(maxHeight: 100)
+                            .padding(.top, -10)
+                            .padding(.bottom, 10)
+                            .listRowBackground(Color.lightgray)
 
+                        
+                        ListTitle(title: "Where")
+                            .listRowBackground(Color.lightgray)
+
+                        
+                        ListMap(placeLatitude: 45.4654219, placeLongitude: 9.1859243)
+                            .listRowBackground(Color.lightgray)
+                            .padding(.bottom, 20)
+
+                        
+                        ListButton(title: "Guests",
+                                   contentOpened: AnyView(GuestsContent()),
+                                   contentClosed: AnyView(GuestsContent().showGuests() ))
+                            .listRowBackground(Color.lightgray)
+
+                        
+                        ListButton(title: "Dates",
+                                   contentOpened: AnyView(DatesContent() ),
+                                   contentClosed: AnyView(DatesContent().showDates() ))
+                            .listRowBackground(Color.lightgray)
+                            .padding(.bottom)
+
+                    }
+                
             }
-
         }
         .background(Color.white)
     }
