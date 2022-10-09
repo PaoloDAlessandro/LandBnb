@@ -60,7 +60,9 @@ struct LogInView: View {
                     VStack(alignment: .leading) {
                         Text("Email")
                             .fontWeight(.semibold)
+                            .foregroundColor(.darkblue)
                         TextField("", text: $email)
+                            .foregroundColor(.darkblue)
                             .padding(12)
                             .background(.white)
                             .cornerRadius(20)
@@ -80,7 +82,9 @@ struct LogInView: View {
                     VStack(alignment: .leading) {
                         Text("Password")
                             .fontWeight(.semibold)
+                            .foregroundColor(.darkblue)
                         TextField("", text: $password)
+                            .foregroundColor(.darkblue)
                             .padding(12)
                             .background(.white)
                             .cornerRadius(20)
@@ -112,9 +116,10 @@ struct LogInView: View {
                 }
                 .background(.white)
                 .cornerRadius(40)
-                .overlay(
+       /*         .overlay(
                     RoundedRectangle(cornerRadius: 40)
                         .stroke(.gray.opacity(0.6), lineWidth: 1))
+        */
                 .shadow(color: Color.gray.opacity(0.05), radius: 2)
                 
                 Spacer()
@@ -128,6 +133,7 @@ struct LogInView: View {
         }.background(
             Image("surface")
                 .blur(radius: 2)
+                .background(Color.white)
         )
     }
 }

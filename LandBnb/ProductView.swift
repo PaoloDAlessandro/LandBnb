@@ -40,8 +40,11 @@ struct ProductView: View {
                 ListButton(title: "Dates",
                            contentOpened: AnyView(DatesContent() ),
                            contentClosed: AnyView(DatesContent().showDates() ))
+
             }
+
         }
+        .background(Color.white)
     }
 }
 

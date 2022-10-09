@@ -45,7 +45,9 @@ struct ContentView: View {
                     .foregroundColor(.darkblue)
                 HStack {
                     Image(systemName: "magnifyingglass")
+                        .foregroundColor(.darkblue)
                     TextField("", text: $search)
+                        .foregroundColor(.darkblue)
                 }
                 .padding(12)
                 .background(Color.white)
@@ -71,6 +73,7 @@ struct ContentView: View {
         }.background(
             Image("surface")
                 .blur(radius: 2)
+                .background(Color.white)
                 
         )
     }

@@ -23,10 +23,15 @@ struct LandBnbUI: View {
                 
                 ProductView()
                     .tag("safari")
+                    .background(.white)
+                
+                MessagesView()
+                    .tag("message")
                 
                 LogInView()
                     .tag("person")
             }
+            .background(.white)
                 HStack(spacing: 0) {
                     ForEach(tabs, id: \.self) { image in
                         Button(action: { selectedTab = image}, label: {

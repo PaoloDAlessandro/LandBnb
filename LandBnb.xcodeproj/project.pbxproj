@@ -19,6 +19,7 @@
 		527B294928ED96F700AC44AA /* LandBnbUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294828ED96F700AC44AA /* LandBnbUI.swift */; };
 		527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294A28EDB82E00AC44AA /* PaymentView.swift */; };
 		527B294D28EDD56A00AC44AA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294C28EDD56A00AC44AA /* MessagesView.swift */; };
+		52F217AF28F2EDA600C9E0D5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F217AE28F2EDA600C9E0D5 /* ChatView.swift */; };
 		C523FA2828EC819E003486A7 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523FA2728EC819E003486A7 /* ProductView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		527B294828ED96F700AC44AA /* LandBnbUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUI.swift; sourceTree = "<group>"; };
 		527B294A28EDB82E00AC44AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		527B294C28EDD56A00AC44AA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		52F217AE28F2EDA600C9E0D5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		C523FA2728EC819E003486A7 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				523FD15A28EC5F4400C6F0AA /* ContentView.swift */,
 				527B294828ED96F700AC44AA /* LandBnbUI.swift */,
 				527B294C28EDD56A00AC44AA /* MessagesView.swift */,
+				52F217AE28F2EDA600C9E0D5 /* ChatView.swift */,
 				523FD15C28EC5F4500C6F0AA /* Assets.xcassets */,
 				523FD15E28EC5F4500C6F0AA /* LandBnb.entitlements */,
 				523FD15F28EC5F4500C6F0AA /* Preview Content */,
@@ -281,6 +284,7 @@
 				523FD18628EC85D200C6F0AA /* LogInView.swift in Sources */,
 				C523FA2828EC819E003486A7 /* ProductView.swift in Sources */,
 				523FD15B28EC5F4400C6F0AA /* ContentView.swift in Sources */,
+				52F217AF28F2EDA600C9E0D5 /* ChatView.swift in Sources */,
 				527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */,
 				523FD15928EC5F4400C6F0AA /* LandBnbApp.swift in Sources */,
 				523FD18428EC744E00C6F0AA /* Color.swift in Sources */,
@@ -452,13 +456,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnb;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = it.rizzoli.landbnb;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.landbnb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -490,13 +493,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.LandBnb;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = it.rizzoli.landbnb;
+				PRODUCT_BUNDLE_IDENTIFIER = it.rizzoli.landbnb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
