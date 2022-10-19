@@ -40,7 +40,7 @@ struct LandBnbUI: View {
                                 .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 22, height: 22)
-                                .foregroundColor(selectedTab == image ? .redIcon : .darkblue)
+                                .foregroundColor(selectedTab == image ? .redIcon : Color("iconOut"))
                             
                         })
                         .frame(width: 25, height: 30)
@@ -49,11 +49,11 @@ struct LandBnbUI: View {
                 }
                 .padding(.horizontal, 30)
                 .padding(.vertical)
-                .background(.white)
+                .background(Color("navbar"))
                 .cornerRadius(40)
                 .shadow(radius: 2)
                 .padding(.horizontal)
-                .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
+                .padding(.bottom, 20)
             
             }
             .ignoresSafeArea(.all, edges: .all)

@@ -19,7 +19,7 @@
 		527B294928ED96F700AC44AA /* LandBnbUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294828ED96F700AC44AA /* LandBnbUI.swift */; };
 		527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294A28EDB82E00AC44AA /* PaymentView.swift */; };
 		527B294D28EDD56A00AC44AA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294C28EDD56A00AC44AA /* MessagesView.swift */; };
-		52F217AF28F2EDA600C9E0D5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F217AE28F2EDA600C9E0D5 /* ChatView.swift */; };
+		52E2C06328FFF4FA0059A85E /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2C06228FFF4FA0059A85E /* chatView.swift */; };
 		C523FA2828EC819E003486A7 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523FA2728EC819E003486A7 /* ProductView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,8 @@
 		523FD18528EC85D200C6F0AA /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		527B294828ED96F700AC44AA /* LandBnbUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUI.swift; sourceTree = "<group>"; };
 		527B294A28EDB82E00AC44AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
-		527B294C28EDD56A00AC44AA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
-		52F217AE28F2EDA600C9E0D5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		527B294C28EDD56A00AC44AA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		52E2C06228FFF4FA0059A85E /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 		C523FA2728EC819E003486A7 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,6 @@
 				523FD15A28EC5F4400C6F0AA /* ContentView.swift */,
 				527B294828ED96F700AC44AA /* LandBnbUI.swift */,
 				527B294C28EDD56A00AC44AA /* MessagesView.swift */,
-				52F217AE28F2EDA600C9E0D5 /* ChatView.swift */,
 				523FD15C28EC5F4500C6F0AA /* Assets.xcassets */,
 				523FD15E28EC5F4500C6F0AA /* LandBnb.entitlements */,
 				523FD15F28EC5F4500C6F0AA /* Preview Content */,
@@ -121,6 +120,7 @@
 				C523FA2728EC819E003486A7 /* ProductView.swift */,
 				523FD18528EC85D200C6F0AA /* LogInView.swift */,
 				527B294A28EDB82E00AC44AA /* PaymentView.swift */,
+				52E2C06228FFF4FA0059A85E /* chatView.swift */,
 			);
 			path = LandBnb;
 			sourceTree = "<group>";
@@ -283,8 +283,8 @@
 				527B294D28EDD56A00AC44AA /* MessagesView.swift in Sources */,
 				523FD18628EC85D200C6F0AA /* LogInView.swift in Sources */,
 				C523FA2828EC819E003486A7 /* ProductView.swift in Sources */,
+				52E2C06328FFF4FA0059A85E /* chatView.swift in Sources */,
 				523FD15B28EC5F4400C6F0AA /* ContentView.swift in Sources */,
-				52F217AF28F2EDA600C9E0D5 /* ChatView.swift in Sources */,
 				527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */,
 				523FD15928EC5F4400C6F0AA /* LandBnbApp.swift in Sources */,
 				523FD18428EC744E00C6F0AA /* Color.swift in Sources */,

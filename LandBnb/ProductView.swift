@@ -13,8 +13,8 @@ struct ProductView: View {
     
     init() {
        UITableView.appearance().separatorStyle = .none
-       UITableViewCell.appearance().backgroundColor = .white
-       UITableView.appearance().backgroundColor = .white
+       UITableViewCell.appearance().backgroundColor = UIColor(Color("bg"))
+       UITableView.appearance().backgroundColor = UIColor(Color("bg"))
     }
     
     var body: some View {
@@ -28,52 +28,51 @@ struct ProductView: View {
                 Divider()
                     List {
                         ListTitle(title: "Accomodation Name")
-                            .listRowBackground(Color.lightgray)
-                            .foregroundColor(.darkblue)
+                            .listRowBackground(Color("boxBg"))
                         
                         Text("Milan, Lombardy, Italy")
-                            .foregroundColor(.darkblue.opacity(0.9))
+                            .foregroundColor(Color("subTextColor"))
                             .listRowSeparator(.hidden)
                             .foregroundColor(.gray)
                             .padding(.top, -20)
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
 
                         
                         Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color("subTextColor"))
                             .listRowSeparator(.hidden)
                             .frame(maxHeight: 100)
                             .padding(.top, -10)
                             .padding(.bottom, 10)
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
 
                         
                         ListTitle(title: "Where")
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
 
                         
                         ListMap(placeLatitude: 45.4654219, placeLongitude: 9.1859243)
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
                             .padding(.bottom, 20)
 
                         
                         ListButton(title: "Guests",
                                    contentOpened: AnyView(GuestsContent()),
                                    contentClosed: AnyView(GuestsContent().showGuests() ))
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
 
                         
                         ListButton(title: "Dates",
                                    contentOpened: AnyView(DatesContent() ),
                                    contentClosed: AnyView(DatesContent().showDates() ))
-                            .listRowBackground(Color.lightgray)
+                            .listRowBackground(Color("boxBg"))
                             .padding(.bottom)
 
                     }
                 
             }
         }
-        .background(Color.white)
+        .background(Color("bg"))
     }
 }
 
@@ -103,7 +102,7 @@ struct ListTitle: View {
     var body: some View {
         Text(title)
             .font(.title)
-            .foregroundColor(.black)
+            .foregroundColor(Color("textColor"))
             .listRowSeparator(.hidden)
     }
 }
@@ -119,7 +118,7 @@ struct TextLeft: View {
         HStack {
             Text(text)
                 .underline()
-                .foregroundColor(.gray)
+                .foregroundColor(Color("subTextColor"))
             Spacer()
         }
     }
@@ -248,7 +247,7 @@ struct DatesContent: View {
         return HStack {
             Text("\(checkInDate, style: .date) - \(checkOutDate, style: .date)")
                 .underline()
-                .foregroundColor(.gray)
+                .foregroundColor(Color("subTextColor"))
             Spacer()
         }
     }
