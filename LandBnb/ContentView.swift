@@ -19,6 +19,11 @@ struct ContentView: View {
     
     private var countries: [Country] = [Country(name: "Spain", flag: "🇪🇸"), Country(name: "Greek", flag: "🇬🇷"), Country(name: "Norway", flag: "🇳🇴")]
     
+    init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().backgroundColor = UIColor(Color("bg"))
+        UITableView.appearance().backgroundColor = UIColor(Color("bg"))
+    }
     
     var body: some View {
         ZStack {
@@ -59,6 +64,8 @@ struct ContentView: View {
                                     }
                                     .padding([.top, .bottom], 8)
                                 }
+                                .listRowBackground(Color("boxBg"))
+
                             }
                         }
                         .navigationBarHidden(true)

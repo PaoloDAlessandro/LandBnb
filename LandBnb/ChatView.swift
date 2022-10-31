@@ -33,27 +33,35 @@ struct chatView: View {
             }
             Spacer()
                     
-            HStack {
-                Image(systemName: "paperplane")
-                TextField(
-                    "",
-                    text: $message,
-                    onCommit: {
-                        /*
-                        var currentUser = users.first(where: {$0.username == user.username})
-                        currentUser?.messages.append(Message(username: "myself", text: message, date: Date()))
-                        print(currentUser?.messages)
-                         */
-                        message = ""
-                    })
-                    .background(.gray)
-                    .cornerRadius(20)
+            VStack(alignment:.center) {
+                HStack {
+                    TextField(
+                        "",
+                        text: $message,
+                        onCommit: {
+                            user.messages.append(Message(username: "myself", text: message, date: Date()))
+                            print(user.messages)
+                            message = ""
+                        })
+                    Button(action: {user.messages.append(Message(username: "myself", text: message, date: Date()))}) {
+                        Image(systemName: "paperplane")
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(.blue)
+                            .clipShape(Circle())
+                    }
+                }
+                .padding(6)
+                .padding(.leading, 12)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 80)
+                        .stroke(.blue)
+                )
+                .frame(height: 80)
             }
-            .padding(.bottom, 20)
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
-
     }
 }
 

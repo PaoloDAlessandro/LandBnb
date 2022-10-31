@@ -16,7 +16,7 @@ public struct User: Identifiable {
     public var id: String { username }
 }
 
-public let users: [User] = [
+public var users: [User] = [
     User(username: "Alessandro", userImage: "aledele", messages: [Message(id: UUID(), username: "Alessandro", text: "Ciao Marco, piacere Alessandro!", date: Date()), Message(id: UUID(), username: "myself", text: "Ciao Alessandro!", date: Date())], status: true),
     User(username: "Paolo", userImage: "paolo", messages: [Message(id: UUID(), username: "Paolo", text: "Ciao Marco!", date: Date()), Message(id: UUID(), username: "myself", text: "Wella!", date: Date())], status: false),
     User(username: "Simone", userImage: "simone", messages: [Message(id: UUID(), username: "Paolo", text: "Ciao Marco", date: Date()), Message(id: UUID(), username: "Paolo", text: "Ti mando il preventivo per le date scelte", date: Date()), Message(id: UUID(), username: "myself", text: "Ok, grazie!", date: Date())], status: true)

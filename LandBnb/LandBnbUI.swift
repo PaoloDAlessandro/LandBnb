@@ -10,11 +10,12 @@ import SwiftUI
 
 struct LandBnbUI: View {
     var tabs = ["magnifyingglass", "heart", "safari", "message", "person"]
-    
+
     @State var selectedTab = "Esplora"
-    
+    @State public var showTabView = true
     init() {
         UITabBar.appearance().backgroundColor = nil
+
     }
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)){
@@ -54,6 +55,8 @@ struct LandBnbUI: View {
                 .shadow(radius: 2)
                 .padding(.horizontal)
                 .padding(.bottom, 20)
+                
+
             
             }
             .ignoresSafeArea(.all, edges: .all)
