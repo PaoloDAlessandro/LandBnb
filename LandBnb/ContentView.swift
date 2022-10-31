@@ -14,43 +14,18 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-                Rectangle()
-                    .frame(width: .infinity, height: .infinity)
-                    .opacity(0.001)
-                    .layoutPriority(-1)
-                    .onTapGesture {
-                        searchOnOver = false
-                }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.lightgray)
-            .cornerRadius(20)
-            .padding([.bottom, .top], -10)
-            .padding(.horizontal, 20)
-            
-            VStack {
-                HStack {
-                    Image("logo")
-                        .padding()
-                        .frame(maxHeight: 50)
-                }
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(14)
-                
-                Spacer()
-                    .frame(maxHeight: 280)
                 Text("Dove vuoi andare?")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(.darkblue)
+                    .foregroundColor(Color("textColor"))
                 HStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.darkblue)
+                        .foregroundColor(Color("textColor"))
                     TextField("", text: $search)
-                        .foregroundColor(.darkblue)
+                        .foregroundColor(Color("textColor"))
                 }
                 .padding(12)
-                .background(Color.white)
+                .background(Color("textField"))
                 .cornerRadius(20)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
@@ -58,24 +33,11 @@ struct ContentView: View {
                 .onTapGesture {
                     searchOnOver.toggle()
                 }
-                Spacer()
-                TextField("", text: $search)
-                
-                
-                Spacer()
-                    .frame(height: 16)
-
             }
-            
+            .removeFocusOnTap()
             .padding([.bottom, .top], 0)
             .padding(.horizontal, 50)
-
-        }.background(
-            Image("surface")
-                .blur(radius: 2)
-                .background(Color.white)
-                
-        )
+        }
     }
 }
 

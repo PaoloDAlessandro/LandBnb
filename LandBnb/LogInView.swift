@@ -21,53 +21,29 @@ struct LogInView: View {
     @State private var password = ""
     @State private var emailOnOver = false
     @State private var passwordOnOver = false
+    @FocusState private var isFocused: Bool
 
     var body: some View {
-        ZStack {
             VStack {
-                Rectangle()
-                    .frame(width: .infinity, height: .infinity)
-                    .opacity(0.001)
-                    .layoutPriority(-1)
-                    .onTapGesture {
-                        emailOnOver = false
-                        passwordOnOver = false
-                    }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.lightgray)
-            .cornerRadius(20)
-            .padding([.bottom, .top], -10)
-            .padding(.horizontal, 20)
-            
-            VStack {
-                HStack {
-                    Image("logo")
-                        .padding()
-                        .frame(maxHeight: 50)
-                }
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(14)
-                
-                Spacer()
-                    .frame(maxHeight: 130)
-                Text("Accedi")
-                    .font(.title)
-                    .foregroundColor(.darkblue)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 24)
                 VStack {
+                    Text("Accedi")
+                        .font(.title)
+                        .foregroundColor(Color("textColor"))
+                        .fontWeight(.bold)
+                        .padding(.top, 30)
+                        .padding(.bottom, 0)
                     VStack(alignment: .leading) {
                         Text("Email")
                             .fontWeight(.semibold)
-                            .foregroundColor(.darkblue)
+                            .foregroundColor(Color("textColor"))
                         TextField("", text: $email)
-                            .foregroundColor(.darkblue)
+                            .focused($isFocused)
+                            .foregroundColor(Color("subTextColor"))
                             .padding(12)
-                            .background(.white)
-                            .cornerRadius(20)
+                            .background(Color("textField"))
+                            .cornerRadius(10)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 20)
+                                RoundedRectangle(cornerRadius: 10)
                                     .stroke(emailOnOver ? .blue.opacity(0.4) : .gray.opacity(0.4), lineWidth: 1))
                             .onTapGesture {
                                 emailOnOver.toggle()
@@ -76,20 +52,20 @@ struct LogInView: View {
                     }
                     .padding(.bottom, 10)
                     .padding([.leading, .trailing], 26)
-                    .padding(.top, 45)
+                    .padding(.top, 20)
 
-                    
                     VStack(alignment: .leading) {
                         Text("Password")
                             .fontWeight(.semibold)
-                            .foregroundColor(.darkblue)
+                            .foregroundColor(Color("textColor"))
                         TextField("", text: $password)
-                            .foregroundColor(.darkblue)
+                            .focused($isFocused)
+                            .foregroundColor(Color("textColor"))
                             .padding(12)
-                            .background(.white)
-                            .cornerRadius(20)
+                            .background(Color("textField"))
+                            .cornerRadius(10)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 20)
+                                RoundedRectangle(cornerRadius: 10)
                                     .stroke(passwordOnOver ? .blue.opacity(0.4) : .gray.opacity(0.4), lineWidth: 1))
                             .onTapGesture {
                                 passwordOnOver.toggle()
@@ -101,42 +77,32 @@ struct LogInView: View {
                     .padding(.bottom, 24)
 
                     HStack {
-                        Button(action: {})
+                        Button(action: {isFocused = false})
                         {
                             Text("Log-in")
+                                .foregroundColor(.white)
                         }
                         .padding([.bottom, .top], 16)
                         .padding([.leading, .trailing], 28)
                         .foregroundColor(.white)
-                        .background(Color.darkblue)
+                        .background(Color("button"))
                         .cornerRadius(14)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.gray.opacity(0.8), lineWidth: 1)
+                        )
                     }
                     .padding(.bottom, 40)
-                    
                 }
-                .background(.white)
-                .cornerRadius(40)
-       /*         .overlay(
-                    RoundedRectangle(cornerRadius: 40)
-                        .stroke(.gray.opacity(0.6), lineWidth: 1))
-        */
-                .shadow(color: Color.gray.opacity(0.05), radius: 2)
-                
-                Spacer()
+                .background(Color("boxBg"))
+                .cornerRadius(20)
             }
+            .removeFocusOnTap()
             .padding([.bottom, .top], 0)
             .padding(.horizontal, 20)
             .ignoresSafeArea(edges: .bottom)
-            .shadow(radius: 2)
-
-
-        }.background(
-            Image("surface")
-                .blur(radius: 2)
-                .background(Color.white)
-        )
+        }
     }
-}
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {

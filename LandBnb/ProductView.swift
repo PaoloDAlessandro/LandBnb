@@ -31,7 +31,7 @@ struct ProductView: View {
                             .listRowBackground(Color("boxBg"))
                         
                         Text("Milan, Lombardy, Italy")
-                            .foregroundColor(Color("subTextColor"))
+                            .foregroundColor(Color("subTitle"))
                             .listRowSeparator(.hidden)
                             .foregroundColor(.gray)
                             .padding(.top, -20)

@@ -8,20 +8,21 @@
 import SwiftUI
 
 public struct Message: Identifiable {
-    public var id: String { username }
+    public var id:UUID?
     let username: String
-    let message: String
+    let text: String
     let date: Date
 }
-
-struct chatView: View {
     
-    let messages: [Message]
+struct chatView: View {
+        
+    @State private var message: String = ""
+    @State var user: User
     
     var body: some View {
         VStack {
-            ForEach(messages){ message in
-                Text(message.message)
+            ForEach(user.messages){ message in
+                Text(message.text)
                     .foregroundColor(.white)
                     .padding(14)
                     .background(Color.blue)
@@ -31,6 +32,24 @@ struct chatView: View {
                     .frame(height: 20)
             }
             Spacer()
+                    
+            HStack {
+                Image(systemName: "paperplane")
+                TextField(
+                    "",
+                    text: $message,
+                    onCommit: {
+                        /*
+                        var currentUser = users.first(where: {$0.username == user.username})
+                        currentUser?.messages.append(Message(username: "myself", text: message, date: Date()))
+                        print(currentUser?.messages)
+                         */
+                        message = ""
+                    })
+                    .background(.gray)
+                    .cornerRadius(20)
+            }
+            .padding(.bottom, 20)
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
@@ -39,8 +58,3 @@ struct chatView: View {
 }
 
 
-struct chatView_Previews: PreviewProvider {
-    static var previews: some View {
-        chatView(messages: [Message(username: "Alessandro", message: "Ciao Paolo, piacere Alessandro!", date: Date())])
-    }
-}

@@ -8,24 +8,23 @@
 import SwiftUI
 
 
-private struct User: Identifiable {
+public struct User: Identifiable {
     let username: String
     let userImage: String
-    let messages: [Message]
-    var id: String { username }
+    var messages: [Message]
+    let status: Bool
+    public var id: String { username }
 }
 
-private let users: [User] = [
-    User(username: "Alessandro", userImage: "aledele", messages: [Message(username: "Alessandro", message: "Ciao Paolo, piacere Alessandro!", date: Date()), Message(username: "myself", message: "Ciao Alessandro!", date: Date())]),
-    User(username: "Paolo", userImage: "paolo", messages: [Message(username: "Paolo", message: "Ciao Fabrizio!", date: Date()), Message(username: "Paolo", message: "Ti ho ì nostri prezzi", date: Date()), Message(username: "myself", message: "Ok, grazie!", date: Date())]),
-
+public let users: [User] = [
+    User(username: "Alessandro", userImage: "aledele", messages: [Message(id: UUID(), username: "Alessandro", text: "Ciao Marco, piacere Alessandro!", date: Date()), Message(id: UUID(), username: "myself", text: "Ciao Alessandro!", date: Date())], status: true),
+    User(username: "Paolo", userImage: "paolo", messages: [Message(id: UUID(), username: "Paolo", text: "Ciao Marco!", date: Date()), Message(id: UUID(), username: "myself", text: "Wella!", date: Date())], status: false),
+    User(username: "Simone", userImage: "simone", messages: [Message(id: UUID(), username: "Paolo", text: "Ciao Marco", date: Date()), Message(id: UUID(), username: "Paolo", text: "Ti mando il preventivo per le date scelte", date: Date()), Message(id: UUID(), username: "myself", text: "Ok, grazie!", date: Date())], status: true)
 ]
 
 struct MessagesView: View {
     
-    var users_message = ["Erick", "Martin", "Francesca", "Roberto"]
-    var messages = ["L'appartamento viene...", "Ti aspettiamo il 15 agosto", "Ciao! Piacere Manuel", "nana"]
-    
+
     init() {
         UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = UIColor(Color("bg"))
@@ -39,7 +38,7 @@ struct MessagesView: View {
             NavigationView {
                 List {
                     ForEach(users) { user in
-                        UserRow(username: user.username, userImage: user.userImage, messages: user.messages)
+                        UserRow(user: user)
                             .listRowBackground(Color("boxBg"))
                     }
                 }
@@ -48,30 +47,28 @@ struct MessagesView: View {
     }
     
     struct UserRow: View {
-        var username: String
-        var userImage: String
-        var messages: [Message]
+        var user: User
         var body: some View {
-            NavigationLink(destination: chatView(messages: messages)) {
+            NavigationLink(destination: chatView(user: user)) {
                 HStack {
-                    Image(userImage)
+                    Image(user.userImage)
                         .resizable()
                         .frame(width: 40, height: 40)
                         .scaledToFit()
                         .clipShape(Circle())
                     VStack(alignment: .leading) {
-                        Text(username)
+                        Text(user.username)
                             .font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(Color("textColor"))
-                        Text(messages[0].message)
+                        Text(user.messages[user.messages.count - 1].text)
                             .font(.body)
                             .foregroundColor(.gray)
                         
                     }
                     Spacer()
                     Image(systemName: "circle.fill")
-                        .foregroundColor(.green)
+                        .foregroundColor(user.status ? .green : .gray)
                     
                 }
                 .padding([.top, .bottom], 18)
