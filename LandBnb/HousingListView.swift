@@ -25,7 +25,7 @@ struct HousingRow: View {
     var body: some View {
             NavigationLink(destination: ProductView(housing: housing)) {
                 HStack {
-                    Image("madrid")
+                    Image(housing.image)
                         .resizable()
                         .frame(width: 40, height: 40)
                         .scaledToFit()
