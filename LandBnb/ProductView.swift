@@ -20,7 +20,7 @@ struct ProductView: View {
             VStack {
                 ScrollView(.horizontal) {
                     //ForEach
-                    ProductImage(imageName: "House-1")
+                    ProductImage(imageName: housing.image)
                 }
                 
                 Divider()
@@ -49,7 +49,7 @@ struct ProductView: View {
                             .listRowBackground(Color("boxBg"))
 
                         
-                        ListMap(placeLatitude: 45.4654219, placeLongitude: 9.1859243)
+                        ListMap(placeLatitude: housing.coordinate.latitude, placeLongitude: housing.coordinate.longitude)
                             .listRowBackground(Color("boxBg"))
                             .padding(.bottom, 20)
 
