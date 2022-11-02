@@ -53,7 +53,7 @@ struct MessagesView: View {
                 HStack {
                     Image(user.userImage)
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 50, height: 50)
                         .scaledToFit()
                         .clipShape(Circle())
                     VStack(alignment: .leading) {

@@ -24,9 +24,11 @@ struct LandBnbUI: View {
                 ContentView()
                     .tag("magnifyingglass")
                 
-                ProductView(housing: Housing(id: UUID(), name: "ciao", image:"ciao", coordinate: CLLocationCoordinate2D(latitude: 23.00, longitude: 22.00), location: "casfsdfas", description: "ciao"))
+                ComingSoonView()
+                    .tag("heart")
+                
+                ComingSoonView()
                     .tag("safari")
-                    .background(.white)
                 
                 MessagesView()
                     .tag("message")

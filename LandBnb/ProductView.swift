@@ -65,8 +65,23 @@ struct ProductView: View {
                                    contentClosed: AnyView(DatesContent().showDates() ))
                             .listRowBackground(Color("boxBg"))
                             .padding(.bottom)
+                        
+                        HStack() {
+                            Spacer()
+                            Button("Book now") {
+                                
+                            }
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 12)
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .cornerRadius(12)
 
+                            Spacer()
+                        }
                     }
+                
+
                 
             }
         }
@@ -87,8 +102,7 @@ struct ProductImage: View {
             .aspectRatio(contentMode: .fit)
             .frame(maxHeight: 200)
             .cornerRadius(20)
-            .padding()
-            .padding(0)
+            .padding([.leading, .trailing, .bottom])
     }
 }
 
