@@ -16,6 +16,7 @@
 		523FD17728EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD17628EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift */; };
 		523FD18428EC744E00C6F0AA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD18328EC744E00C6F0AA /* Color.swift */; };
 		523FD18628EC85D200C6F0AA /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FD18528EC85D200C6F0AA /* LogInView.swift */; };
+		526B03AC29128C350022AE3D /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B03AB29128C350022AE3D /* CitiesView.swift */; };
 		527B294928ED96F700AC44AA /* LandBnbUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294828ED96F700AC44AA /* LandBnbUI.swift */; };
 		527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294A28EDB82E00AC44AA /* PaymentView.swift */; };
 		527B294D28EDD56A00AC44AA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B294C28EDD56A00AC44AA /* MessagesView.swift */; };
@@ -55,6 +56,7 @@
 		523FD17628EC5F4600C6F0AA /* LandBnbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		523FD18328EC744E00C6F0AA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		523FD18528EC85D200C6F0AA /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		526B03AB29128C350022AE3D /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 		527B294828ED96F700AC44AA /* LandBnbUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandBnbUI.swift; sourceTree = "<group>"; };
 		527B294A28EDB82E00AC44AA /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		527B294C28EDD56A00AC44AA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -113,6 +115,7 @@
 			children = (
 				523FD15828EC5F4400C6F0AA /* LandBnbApp.swift */,
 				523FD15A28EC5F4400C6F0AA /* ContentView.swift */,
+				526B03AB29128C350022AE3D /* CitiesView.swift */,
 				527B294828ED96F700AC44AA /* LandBnbUI.swift */,
 				527B294C28EDD56A00AC44AA /* MessagesView.swift */,
 				523FD15C28EC5F4500C6F0AA /* Assets.xcassets */,
@@ -289,6 +292,7 @@
 				52E2C06328FFF4FA0059A85E /* chatView.swift in Sources */,
 				523FD15B28EC5F4400C6F0AA /* ContentView.swift in Sources */,
 				527B294B28EDB82F00AC44AA /* PaymentView.swift in Sources */,
+				526B03AC29128C350022AE3D /* CitiesView.swift in Sources */,
 				523FD15928EC5F4400C6F0AA /* LandBnbApp.swift in Sources */,
 				523FD18428EC744E00C6F0AA /* Color.swift in Sources */,
 				527B294928ED96F700AC44AA /* LandBnbUI.swift in Sources */,

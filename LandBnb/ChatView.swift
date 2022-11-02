@@ -21,16 +21,19 @@ struct chatView: View {
     
     var body: some View {
         VStack {
-            ForEach(user.messages){ message in
-                Text(message.text)
-                    .foregroundColor(.white)
-                    .padding(14)
-                    .background(Color.blue)
-                    .cornerRadius(20)
-                    .frame(maxWidth: .infinity, alignment: message.username == "myself" ? .trailing : .leading)
-                Spacer()
-                    .frame(height: 20)
+            ScrollView {
+                    ForEach(user.messages){ message in
+                        Text(message.text)
+                            .foregroundColor(.white)
+                            .padding(14)
+                            .background(Color.blue)
+                            .cornerRadius(20)
+                            .frame(maxWidth: .infinity, alignment: message.username == "myself" ? .trailing : .leading)
+                        Spacer()
+                            .frame(height: 20)
+                    }
             }
+        
             Spacer()
                     
             VStack(alignment:.center) {
@@ -39,11 +42,17 @@ struct chatView: View {
                         "",
                         text: $message,
                         onCommit: {
-                            user.messages.append(Message(username: "myself", text: message, date: Date()))
-                            print(user.messages)
+                            if(message != "") {
+                                user.messages.append(Message(id: UUID(), username: "myself", text: message, date: Date()))
+                            }
                             message = ""
                         })
-                    Button(action: {user.messages.append(Message(username: "myself", text: message, date: Date()))}) {
+                    Button {
+                        if(message != "") {
+                            user.messages.append(Message(id: UUID(), username: "myself", text: message, date: Date()))
+                        }
+                        message = ""
+                    } label: {
                         Image(systemName: "paperplane")
                             .foregroundColor(.white)
                             .padding(10)
