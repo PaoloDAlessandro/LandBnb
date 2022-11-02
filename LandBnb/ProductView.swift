@@ -85,8 +85,10 @@ struct ProductImage: View {
         Image(imageName)
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .frame(maxHeight: 200)
             .cornerRadius(20)
             .padding()
+            .padding(0)
     }
 }
 
