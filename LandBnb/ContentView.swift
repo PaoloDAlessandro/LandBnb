@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct Country: Identifiable {
     let name: String
@@ -17,20 +18,46 @@ struct Country: Identifiable {
 public struct City: Identifiable {
     public var id: UUID
     var name: String
-    //let housingList: [Housing]
+    let housingList: [Housing]
 }
 
 public struct Housing: Identifiable {
     public var id: UUID
     var name: String
+    var coordinate: CLLocationCoordinate2D
     var location: String
+    var description: String
 }
 
 struct ContentView: View {
     @State private var search = ""
     @State private var searchOnOver = false
     
-    private var countries: [Country] = [Country(name: "Spain", flag: "🇪🇸", citiesList: [City(id: UUID(), name: "Siviglia"), City(id: UUID(), name: "Cartagena"), City(id: UUID(), name: "Madrid"), City(id: UUID(), name: "Barcellona"), City(id: UUID(), name: "Ibiza"), City(id: UUID(), name: "Granada"), City(id: UUID(), name:"Valencia"), City(id: UUID(), name: "Pamplona"), City(id: UUID(), name: "Cordoba"), City(id: UUID(), name: "Salamanca")]), Country(name: "Greek", flag: "🇬🇷", citiesList: [City(id: UUID(), name: "Corfù"), City(id: UUID(), name: "Atene"), City(id: UUID(), name:"Zante"), City(id: UUID(), name: "Olimpia"), City(id: UUID(), name: "Delfi"), City(id: UUID(), name:"Meteora"), City(id: UUID(), name: "La Canea")]), Country(name: "Norway", flag: "🇳🇴", citiesList: [City(id: UUID(), name: "Oslo"), City(id: UUID(), name: "Bergen"), City(id: UUID(), name:"Trondheim"), City(id: UUID(), name: "Alesund"), City(id: UUID(), name: "Tromsø")])]
+    private var countries: [Country] = [Country(name: "Spain", flag: "🇪🇸", citiesList:
+                                                    [City(id: UUID(), name: "Siviglia", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "Quant self-catering cabin gently nestled into the historic family-run Dry Island. 'Otter Cabin' is fitted out to a high standard with a double bedroom, shower room, open plan kitchen and living room and its own hot tub and decking area. This is a traditional self-catering unit. Kitchen basics and linens are provided. High-speed wifi is available. Unfortunately, the cabin is inaccessible to those with mobility difficulties.")]),
+                                                     City(id: UUID(), name: "Cartagena", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Madrid", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Barcellona", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Ibiza", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Granada", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name:"Valencia", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Pamplona", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Cordoba", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Salamanca", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")])]),
+                                        Country(name: "Greek", flag: "🇬🇷", citiesList:
+                                                    [City(id: UUID(), name: "Corfù", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Atene", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name:"Zante", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Olimpia", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Delfi", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name:"Meteora", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "La Canea", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")])]),
+                                        Country(name: "Norway", flag: "🇳🇴", citiesList:
+                                                    [City(id: UUID(), name: "Oslo", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Bergen", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name:"Trondheim", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Alesund", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")]),
+                                                     City(id: UUID(), name: "Tromsø", housingList: [Housing(id: UUID(), name: "Casa Omar", coordinate: CLLocationCoordinate2D(latitude: 45.464098, longitude: 9.191926), location: "Milan, Lombardy, Italy", description: "")])])]
     
     init() {
         UITableView.appearance().separatorStyle = .none

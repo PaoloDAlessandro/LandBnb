@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 
 struct LandBnbUI: View {
@@ -23,7 +24,7 @@ struct LandBnbUI: View {
                 ContentView()
                     .tag("magnifyingglass")
                 
-                ProductView()
+                ProductView(housing: Housing(id: UUID(), name: "ciao", coordinate: CLLocationCoordinate2D(latitude: 23.00, longitude: 22.00), location: "casfsdfas", description: "ciao"))
                     .tag("safari")
                     .background(.white)
                 

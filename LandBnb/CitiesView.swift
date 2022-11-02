@@ -23,9 +23,9 @@ struct CitiesView: View {
 struct CityRow: View {
     var city: City
     var body: some View {
-            NavigationLink(destination: ProductView()) {
+            NavigationLink(destination: HousingListView(city: city)) {
                 HStack {
-                    Image("madrid")
+                    Image(city.name)
                         .resizable()
                         .frame(width: 40, height: 40)
                         .scaledToFit()

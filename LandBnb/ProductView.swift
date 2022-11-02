@@ -11,26 +11,24 @@ import MapKit
 
 struct ProductView: View {
     
-    init() {
-       UITableView.appearance().separatorStyle = .none
-       UITableViewCell.appearance().backgroundColor = UIColor(Color("bg"))
-       UITableView.appearance().backgroundColor = UIColor(Color("bg"))
-    }
-    
+    @State var housing: Housing
+        
+        
     var body: some View {
+        
         VStack {
             VStack {
                 ScrollView(.horizontal) {
                     //ForEach
-                    ProductImage(imageName: "product-example")
+                    ProductImage(imageName: "House-1")
                 }
                 
                 Divider()
                     List {
-                        ListTitle(title: "Accomodation Name")
+                        ListTitle(title: housing.name)
                             .listRowBackground(Color("boxBg"))
                         
-                        Text("Milan, Lombardy, Italy")
+                        Text(housing.location)
                             .foregroundColor(Color("subTitle"))
                             .listRowSeparator(.hidden)
                             .foregroundColor(.gray)
@@ -38,7 +36,7 @@ struct ProductView: View {
                             .listRowBackground(Color("boxBg"))
 
                         
-                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.")
+                        Text(housing.description)
                             .foregroundColor(Color("subTextColor"))
                             .listRowSeparator(.hidden)
                             .frame(maxHeight: 100)
@@ -230,6 +228,15 @@ struct ListStepper: View {
 }
 */
 
+final class Checkpoint: NSObject, MKAnnotation {
+    let title: String?
+    let coordinate: CLLocationCoordinate2D
+    init(title: String?, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.coordinate = coordinate
+    }
+}
+
 struct DatesContent: View {
     @State private var checkInDate = Date()
     @State private var checkOutDate = Date()
@@ -253,8 +260,11 @@ struct DatesContent: View {
     }
 }
 
-struct ProductView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductView()
-    }
-}
+/*
+ struct ProductView_Previews: PreviewProvider {
+ static var previews: some View {
+ ProductView()
+ }
+ }
+ 
+*/
