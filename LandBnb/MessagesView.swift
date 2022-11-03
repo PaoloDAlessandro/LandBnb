@@ -47,9 +47,9 @@ struct MessagesView: View {
     }
     
     struct UserRow: View {
-        var user: User
+        @State var user: User
         var body: some View {
-            NavigationLink(destination: chatView(user: user)) {
+            NavigationLink(destination: chatView(user: $user)) {
                 HStack {
                     Image(user.userImage)
                         .resizable()

@@ -17,7 +17,7 @@ public struct Message: Identifiable {
 struct chatView: View {
         
     @State private var message: String = ""
-    @State var user: User
+    @Binding var user: User
     
     var body: some View {
         VStack {
